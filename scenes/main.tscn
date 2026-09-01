@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.18, 0.28, 0.2, 1)
+mouse_filter = 2
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.42
+anchor_right = 0.5
+anchor_bottom = 0.42
+offset_left = -160.0
+offset_top = -110.0
+offset_right = 160.0
+offset_bottom = 110.0
+
+[node name="Plots" type="GridContainer" parent="Center"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Label" parent="UI"]
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 348.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.9, 0.98, 0.9, 1)
+theme_override_font_sizes/font_size = 15
+text = "金币 20"
+
+[node name="Actions" type="HBoxContainer" parent="UI"]
+offset_left = 20.0
+offset_top = 560.0
+offset_right = 340.0
+offset_bottom = 610.0
+theme_override_constants/separation = 8
+
+[node name="Seed" type="Button" parent="UI/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "播种"
+
+[node name="Water" type="Button" parent="UI/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "浇水"
+
+[node name="Harvest" type="Button" parent="UI/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "收获"
